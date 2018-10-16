@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+		<title>项目</title>
+
+		<!-- Bootstrap -->
+		<link href="../node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+
+		<!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+		<!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+		<!--[if lt IE 9]>
+    <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+		<style>
+			.cc_navbar-default {
+				background-color: #fff;
+				border-color: #e7e7e7;
+			}
+			
+			.cc_navbar-default .navbar-brand {
+				color: #777;
+				display: block;
+			}
+			
+			.cc_navbar-default .navbar-brand img {
+				display: block;
+				display: 30px;
+				height: 30px;
+			}
+			
+			.cc_navbar-default .navbar-brand:hover,
+			.cc_navbar-default .navbar-brand:focus {
+				color: #5e5e5e;
+				background-color: transparent;
+			}
+			
+			.cc_navbar-default .navbar-text {
+				color: #777;
+			}
+			
+			.cc_navbar-default .navbar-nav>li>a {
+				color: black;
+			}
+			
+			.cc_navbar-default .navbar-nav>li>a:hover,
+			.cc_navbar-default .navbar-nav>li>a:focus {
+				color: #333;
+				background-color: transparent;
+			}
+			
+			.cc_navbar-default .navbar-nav>.active>a,
+			.cc_navbar-default .navbar-nav>.active>a:hover,
+			.cc_navbar-default .navbar-nav>.active>a:focus {
+				color: #555;
+				background-color: #e7e7e7;
+			}
+			
+			.cc_navbar-default .navbar-nav>.disabled>a,
+			.cc_navbar-default .navbar-nav>.disabled>a:hover,
+			.cc_navbar-default .navbar-nav>.disabled>a:focus {
+				color: #ccc;
+				background-color: transparent;
+			}
+			
+			.cc_navbar-default .navbar-toggle {
+				border-color: #ddd;
+			}
+			
+			.cc_navbar-default .navbar-toggle:hover,
+			.cc_navbar-default .navbar-toggle:focus {
+				background-color: #ddd;
+			}
+			
+			.cc_navbar-default .navbar-toggle .icon-bar {
+				background-color: #888;
+			}
+			
+			.cc_navbar-default .navbar-collapse,
+			.cc_navbar-default .navbar-form {
+				border-color: #e7e7e7;
+			}
+			
+			.cc_navbar-default .navbar-nav>.open>a,
+			.cc_navbar-default .navbar-nav>.open>a:hover,
+			.cc_navbar-default .navbar-nav>.open>a:focus {
+				color: #555;
+				background-color: #e7e7e7;
+			}
+			
+			@media (max-width: 767px) {
+				.cc_navbar-default .navbar-nav .open .dropdown-menu>li>a {
+					color: #777;
+				}
+				.cc_navbar-default .navbar-nav .open .dropdown-menu>li>a:hover,
+				.cc_navbar-default .navbar-nav .open .dropdown-menu>li>a:focus {
+					color: #333;
+					background-color: transparent;
+				}
+				.cc_navbar-default .navbar-nav .open .dropdown-menu>.active>a,
+				.cc_navbar-default .navbar-nav .open .dropdown-menu>.active>a:hover,
+				.cc_navbar-default .navbar-nav .open .dropdown-menu>.active>a:focus {
+					color: #555;
+					background-color: #e7e7e7;
+				}
+				.cc_navbar-default .navbar-nav .open .dropdown-menu>.disabled>a,
+				.cc_navbar-default .navbar-nav .open .dropdown-menu>.disabled>a:hover,
+				.cc_navbar-default .navbar-nav .open .dropdown-menu>.disabled>a:focus {
+					color: #ccc;
+					background-color: transparent;
+				}
+			}
+			
+			.cc_navbar-default .navbar-link {
+				color: #777;
+			}
+			
+			.cc_navbar-default .navbar-link:hover {
+				color: #333;
+			}
+			
+			.cc_navbar-default .btn-link {
+				color: #777;
+			}
+			
+			.cc_navbar-default .btn-link:hover,
+			.cc_navbar-default .btn-link:focus {
+				color: #333;
+			}
+			
+			.cc_navbar-default .btn-link[disabled]:hover,
+			fieldset[disabled] .cc_navbar-default .btn-link:hover,
+			.cc_navbar-default .btn-link[disabled]:focus,
+			fieldset[disabled] .cc_navbar-default .btn-link:focus {
+				color: #ccc;
+			}
+			
+			.navbar-nav .navbar-one {
+				right: 145px;
+				top: 17px;
+			}
+			
+			.navbar-nav .navbar-two {
+				right: 135px;
+				top: 15px;
+			}
+			
+			.navbar-nav .navbar-three {
+				position: absolute;
+				right: 100px;
+				top: 10px;
+			}
+			
+			.carousel-control.left {
+				background-image: none;
+			}
+			
+			.carousel-control.right {
+				background-image: none;
+			}
+			h2{
+				font-size: 22px;
+				color: #666;
+			}
+			.container .dl-horizontal{
+				border-bottom: 1px solid #eee;
+				margin-bottom: 20px;
+				padding-bottom: 20px;
+			}
+			.biancheng{
+				border-bottom: 1px solid #CCCCCC;
+				margin-bottom: 20px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<nav class="navbar cc_navbar-default">
+			<div class="container">
+				<!-- 手机端显示效果 -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+					<a class="navbar-brand" href="#"><img src="logo.png" /></a>
+				</div>
+
+				<!-- 导航菜单项-->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li>
+							<a href="#">首页 <span class="sr-only">(current)</span></a>
+						</li>
+						<li>
+							<a href="#">企业介绍</a>
+						</li>
+						<li>
+							<a href="#">课程体系</a>
+						</li>
+						<li>
+							<a href="#">师资团队</a>
+						</li>
+						<li>
+							<a href="#">赛事活动</a>
+						</li>
+						<li>
+							<a href="#">荣誉资质</a>
+						</li>
+						<li>
+							<a href="#">媒体报道</a>
+						</li>
+						<li>
+							<a href="#">联系我们</a>
+						</li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li class="glyphicon glyphicon-earphone navbar-one"></li>
+						<li class="navbar-two">0775-6234514</li>
+						<button class="btn btn-info navbar-three">申请免费试听</button>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<div class="page-header-change biancheng">
+			<div class="container">
+				<p>少儿编程培训<small>  >联系我们</small></p>
+			</div>
+		</div>
+
+		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+			<!-- Indicators -->
+			<ol class="carousel-indicators">
+				<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+				<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+				<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+			</ol>
+
+			<!-- Wrapper for slides -->
+			<div class="carousel-inner" role="listbox">
+				<div class="item active">
+					<img src="common_banner_bg.jpg" />
+
+				</div>
+				<div class="item">
+					<img src="common_banner_bg.jpg" />
+
+				</div>
+				<div class="item">
+					<img src="common_banner_bg.jpg" />
+
+				</div>
+			</div>
+
+			<!-- Controls -->
+			<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
+		</div>
+		<p></p>
+		<div class="container">
+			<dl class="dl-horizontal " >
+			  <dt><img src="4.jpg" class="img-thumbnail"/></dt>
+			  <dd>
+			  	<h2 class="text-success"><a href="#" class="text-muted">重仓青少编程，揭秘达内“算盘”</a></h2>
+				<p class="">从最新的2018财年Q2财报来看，童程童美单季实现招生10570人次，同比增长512.8%，现金收入约1.27亿元，占比达内整体现金收入近20%。</p>
+				
+				<p>2018-09-26</p>
+			  </dd>
+			  
+			</dl>
+			<p></p>
+			<dl class="dl-horizontal " >
+			  <dt><img src="4.jpg"  class="img-rounded"/></dt>
+			  <dd>
+			  	<h2><a href="#" class="text-muted">重仓青少编程，揭秘达内“算盘”</a></h2>
+				<p>从最新的2018财年Q2财报来看，童程童美单季实现招生10570人次，同比增长512.8%，现金收入约1.27亿元，占比达内整体现金收入近20%。</p>
+				<p>2018-09-26</p>
+			  </dd>
+			</dl>
+			<dl class="dl-horizontal " >
+			  <dt><img src="4.jpg"  class="img-circle"/></dt>
+			  <dd>
+			  	<h2><a href="#" class="text-muted">重仓青少编程，揭秘达内“算盘”</a></h2>
+				<p>从最新的2018财年Q2财报来看，童程童美单季实现招生10570人次，同比增长512.8%，现金收入约1.27亿元，占比达内整体现金收入近20%。</p>
+				<p class="">2018-09-26</p>
+			  </dd>
+			</dl>
+			<div class="page-header-change text-center">
+				<div class="container text-center">
+					<nav aria-label="Page navigation page-header-change text-center">
+						<ul class=" container pagination  page">
+						    <li>
+						      <a href="#" aria-label="Previous">
+						        <span aria-hidden="true">上一页</span>
+						      </a>
+						    </li>
+						    <li><a href="#">1</a></li>
+						    <li><a href="#">2</a></li>
+						    <li><a href="#">3</a></li>
+						    <li><a href="#">4</a></li>
+						    <li><a href="#">5</a></li>
+						    <li>
+						      <a href="#" aria-label="Next">
+						        <span aria-hidden="true">下一页</span>
+						      </a>
+						    </li>
+					  </ul>
+					</nav>
+				</div>			
+			</div>
+		</div>
+		<div class="container-fluid" style="height: 200px ; background: #666;">
+			<div class="container" >
+				<div class="row">
+					<div class="col-md-4 col-sm-6 col-s">
+						童诚童美
+					</div>
+					<div class="col-md-4 col-sm-6">
+						课程体系
+					</div>
+					<div class="col-md-4 col-sm-6">
+						师资团队
+					</div>
+					<div class="col-md-4 col-sm-6">
+						师资团队
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4 ">
+						123456
+					</div>
+					<div class="col-md-4">
+						123456
+					</div>
+					<div class="col-md-4">
+						123456
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4">
+						123456
+					</div>
+					<div class="col-md-4">
+						123456
+					</div>
+					<div class="col-md-4">
+						123456
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+		<script src="../node_modules/bootstrap/dist/js/jquery.js"></script>
+		<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+		<script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+		<script>
+			$(function() {
+				let startX = 0;
+				let endX = 0;
+				let isMove = false;
+				
+				$('#carousel-example-generic').on('touchstart', function(e) {
+					startX = e.originalEvent.touches[0].clientX;
+					$('#code').carousel('pause');
+				});
+				$('#carousel-example-generic').on('touchmove', function(e) {
+					endX = e.originalEvent.touches[0].clientX;
+					isMove = true;
+				});
+				$('#carousel-example-generic').on('touchend', function() {
+					if(isMove) {
+						if(endX > startX) {
+							//console.log("看上一张")
+							$('#carousel-example-generic').carousel('prev')
+						} else {
+							//console.log("看下一张")
+							$('#carousel-example-generic').carousel('next')
+						}
+					}
+				});
+			})
+		</script>
+	</body>
+
+</html>
